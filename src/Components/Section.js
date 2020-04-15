@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 
 const Container = styled.div`
-margin-top : 30px;`
+margin-top : 60px;`
 
 
 const Title = styled.span`
