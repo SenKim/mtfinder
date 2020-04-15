@@ -70,16 +70,17 @@ font-size : 20px;`
 
 const Overview = styled.p`
 margin-top : 30px;
-line-height : 20px; 
-width : 80%;`
+line-height : 23px; 
+width : 80%;
+font-size : 13px;`
 
 
 const Yotubue = styled.iframe`
-margin-top : 50px;
+margin-top : 30px;
 height : 50vh;
 `
 const Trailer = styled.div`
-margin-top : 10px;
+margin-top : 5px;
 width : 100%;
 height : 50vh;
 display : flex;
