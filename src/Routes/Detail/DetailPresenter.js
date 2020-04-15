@@ -57,7 +57,8 @@ height : 100%;`
 const Title = styled.h3`
 font-size : 32px;
 padding-top : 20px;
-margin-bottom : 20px;`
+margin-bottom : 20px;
+font-weight : 600;`
 
 const Item = styled.div`
 font-size : 13px;`
