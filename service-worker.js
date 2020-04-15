@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/mtfinder/precache-manifest.a251b70c32438e82d199a0ace638dd26.js"
+  "/mtfinder/precache-manifest.7f85ef5ccd92597e7b2ffa3767db5180.js"
 );
 
 self.addEventListener('message', (event) => {
