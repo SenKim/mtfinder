@@ -58,7 +58,6 @@ function searchPresenter(props) {
                 id = {movie.id} 
                 key = {movie.id}
                 imageUrl = {movie.poster_path} 
-                year = {movie.release_date.substring(0,4)}
                 isMovie ={true}
                 rating = {movie.vote_average}/>)}
                 />)
@@ -71,7 +70,6 @@ function searchPresenter(props) {
                 id = {tv.id}
                 key = {tv.id} 
                 imageUrl = {tv.poster_path} 
-                year = {tv.first_air_date.substring(0,4)}
                 isMovie ={false}
                 rating = {tv.vote_average}/>)} />
             )}

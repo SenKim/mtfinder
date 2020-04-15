@@ -11,6 +11,7 @@ padding-top : 10px;
 padding-bottom : 10px;
 width : 100%;
 position : absolute;
+
 `
 
 const Backdrop = styled.div`
@@ -35,6 +36,7 @@ background-image : url(${Cover => Cover.bgImage});
 background-size : cover;
 background-position :center center;
 border-radius : 8px;
+margin-left : 7%;
 
 
 `
@@ -49,7 +51,8 @@ z-index : 1;
 
 const Data = styled.div`
 margin-left : 100px;
-margin-right : 8%;`
+margin-right : 8%;
+height : 100%;`
 
 const Title = styled.h3`
 font-size : 32px;
@@ -67,16 +70,17 @@ font-size : 20px;`
 const Overview = styled.p`
 margin-top : 30px;
 line-height : 20px; 
-width : 100%;`
+width : 80%;`
 
 
 const Yotubue = styled.iframe`
-
+margin-top : 50px;
+height : 50vh;
 `
 const Trailer = styled.div`
-margin-top : 50px;
+margin-top : 10px;
 width : 100%;
-height : 100%;
+height : 50vh;
 display : flex;
 position: relative;`
 
@@ -120,13 +124,14 @@ function DetailPresenter(props){
     <Overview>
         {result.data.overview ? result.data.overview : <NoTrailer>시놉시스가 없습니다.</NoTrailer>}
     </Overview>
+    
+    </ItemContainer>
     <Trailer>
     {result.data.videos.results[0] ? 
-    <Yotubue id="ytplayer" type="text/html" width="100%" height="400px"
+    <Yotubue id="ytplayer" type="text/html" width="80%" 
   src = {`https://www.youtube.com/embed/${result.data.videos.results[0].key}`}
     frameborder="0" /> : <NoTrailer>트레일러가 없습니다</NoTrailer>} 
     </Trailer>
-    </ItemContainer>
      </Data>  
    </Content>
 </Container>}
