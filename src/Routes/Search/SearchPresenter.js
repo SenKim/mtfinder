@@ -62,7 +62,7 @@ function searchPresenter(props) {
                 rating = {movie.vote_average}/>)}
                 />)
             }
-            {movieResults && movieResults.length === 0 && (<Message text = '검색된 영화가 없습니다.'/>)}
+            {movieResults && movieResults.length === 0 && (<Message text = ''/>)}
         {tvResults && tvResults.length > 0 && (
             <Section title ='TV' 
             children = {tvResults.map(tv => <Poster 
@@ -74,7 +74,7 @@ function searchPresenter(props) {
                 rating = {tv.vote_average}/>)} />
             )}
         
-        {tvResults && tvResults.length === 0 &&(<Container><Message text = '검색된 방송프로그램이 없습니다.' /></Container>)}    
+        {tvResults && tvResults.length === 0 &&(<Container><Message text = '' /></Container>)}    
         </>
     )}
     </>
