@@ -13,7 +13,7 @@ left : 5%;`
 
 const Form = styled.form`
 margin-top : 70px;
-width : 100%;
+width : 95%;
 margin-left : 15px;`
 
 
