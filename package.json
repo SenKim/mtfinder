@@ -1,5 +1,5 @@
 {
-  "name": "nomflix",
+  "name": "moviefinder",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -20,14 +20,13 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy" :"gh-pages -d build",
-    "predeploy" : "npm run build"
-
+    "deploy": "gh-pages -d build",
+    "predeploy": "npm run build"
   },
   "eslintConfig": {
     "extends": "react-app"
   },
-  "homepage" : "https://SenKim.github.io/mtfinder",
+  "homepage": "https://SenKim.github.io/mtfinder",
   "browserslist": {
     "production": [
       ">0.2%",
@@ -40,5 +39,4 @@
       "last 1 safari version"
     ]
   }
-  
 }
