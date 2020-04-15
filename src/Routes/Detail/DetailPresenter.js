@@ -124,7 +124,7 @@ function DetailPresenter(props){
     {result.data.genres && result.data.genres.map((genre, index) => index === 0 ?  `${genre.name}`: `/ ${genre.name}` )}
     </Item>
     <Overview>
-        {result.data.overview ? result.data.overview : <NoTrailer>시놉시스가 없습니다.</NoTrailer>}
+        {result.data.overview ? result.data.overview : <NoTrailer></NoTrailer>}
     </Overview>
     
     </ItemContainer>
@@ -132,7 +132,7 @@ function DetailPresenter(props){
     {result.data.videos.results[0] ? 
     <Yotubue id="ytplayer" type="text/html" width="80%" 
   src = {`https://www.youtube.com/embed/${result.data.videos.results[0].key}`}
-    frameborder="0" /> : <NoTrailer>트레일러가 없습니다</NoTrailer>} 
+    frameborder="0" /> : <NoTrailer></NoTrailer>} 
     </Trailer>
      </Data>  
    </Content>
