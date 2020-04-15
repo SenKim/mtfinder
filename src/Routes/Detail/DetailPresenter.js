@@ -36,6 +36,7 @@ background-size : cover;
 background-position :center center;
 border-radius : 8px;
 margin-left : 7%;
+margin-top: 7px;
 
 
 `
