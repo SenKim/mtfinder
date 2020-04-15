@@ -40,7 +40,7 @@ function TVPresenter(props){
         year = {tv.first_air_date.substring(0,4)}
         isMovie ={false}
         rating = {tv.vote_average}/>)} />
-    <Section title = '현재 방영 중'children = {TopRated.map(tv => <Poster 
+    <Section title = '현재 방영 중'children = {AiringToday.map(tv => <Poster 
         title = {tv.name} 
         id = {tv.id}
         key = {tv.id} 
@@ -48,7 +48,7 @@ function TVPresenter(props){
         year = {tv.first_air_date.substring(0,4)}
         isMovie ={false}
         rating = {tv.vote_average}/>)} />
-    <Section title = '인기작' children = {TopRated.map(tv => <Poster 
+    <Section title = '인기작' children = {popular.map(tv => <Poster 
         title = {tv.name} 
         id = {tv.id}
         key = {tv.id} 
