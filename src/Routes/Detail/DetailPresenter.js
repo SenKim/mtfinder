@@ -7,7 +7,6 @@ import Loader from '../../Components/Loader';
 const Container = styled.div`
 height : calc(100vh - 50px);
 padding : 0 20px;
-padding-top : 10px;
 padding-bottom : 10px;
 width : 100%;
 position : absolute;
