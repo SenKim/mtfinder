@@ -20,7 +20,7 @@ margin-left : 5px;
 margin-bottom : 50px;
 margin-top : 25px;
 display : grid;
-grid-template-columns : repeat(auto-fill, 140px);
+grid-template-columns : repeat(auto-fill, 128px);
 grid-gap: 25px;
 `
 
