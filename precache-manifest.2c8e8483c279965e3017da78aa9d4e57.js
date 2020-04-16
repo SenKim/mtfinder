@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "79461f9a780f4369cc167bada63528d3",
+    "revision": "18b78b1c6c82780f3986f69917e41253",
     "url": "/mtfinder/index.html"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/mtfinder/static/js/2.0311e106.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "11b4bd6279436e5c7010",
-    "url": "/mtfinder/static/js/main.c6bdf44c.chunk.js"
+    "revision": "896ea2deb4d402a2c1ab",
+    "url": "/mtfinder/static/js/main.8daa54f8.chunk.js"
   },
   {
     "revision": "0432bc2687037c7507b6",
