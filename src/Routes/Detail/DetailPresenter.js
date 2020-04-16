@@ -13,6 +13,9 @@ position : absolute;
 
 `
 
+
+
+
 const Backdrop = styled.div`
 position : absolute;
 top: 0;
@@ -30,7 +33,7 @@ const Cover = styled.div`
 width : 100%;
 max-width : 400px;
 min-width : 400px;
-height : 100%;
+height : 95%;
 min-height : 100%;
 background-image : url(${Cover => Cover.bgImage});
 background-size : cover ;
@@ -38,7 +41,8 @@ background-repeat : no-repeat;
 background-position :center center;
 border-radius : 8px;
 margin-left : 7%;
-margin-top: 7px;
+padding-bottom : 20px;
+
 `
 const Content = styled.div`
 position : relative;
@@ -46,12 +50,15 @@ width : 100%;
 height : 100%;
 display : flex;
 z-index : 1;
+padding-top : 20px;
 `;
 
 const Data = styled.div`
 margin-left : 100px;
 margin-right : 8%;
-height : 100%;`
+height : 100%;
+padding-top : 15px;
+`;
 
 const Title = styled.h3`
 font-size : 32px;
@@ -75,7 +82,8 @@ font-size : 13px;`
 
 
 const Yotubue = styled.iframe`
-margin-top : 30px;
+margin-top : 20px;
+padding-top : 10px;
 height : 50vh;
 `
 const Trailer = styled.div`

@@ -39,6 +39,7 @@ position : relative;
 const Title = styled.span`
 display : block;
 font-size : 13px;
+padding-top : 3px;
 `;
 
 const Year = styled.span`
