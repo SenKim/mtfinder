@@ -32,7 +32,8 @@ searchPresenter.propType = {
     error: propType.bool,
     loading: propType.bool};
 
-
+//여기다 함수하나 만들어서 props.searchTerm. 이놈도 디폴트 해주고
+//라우터에다가 주소를 만들어줘서 넣어주면 되지 않을까?, 
 
 
 function searchPresenter(props) {

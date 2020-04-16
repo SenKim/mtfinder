@@ -28,17 +28,17 @@ opacity : 0.5;
 `
 const Cover = styled.div`
 width : 100%;
-max-width : 450px;
-min-width : 300px;
+max-width : 400px;
+min-width : 400px;
 height : 100%;
+min-height : 100%;
 background-image : url(${Cover => Cover.bgImage});
-background-size : cover;
+background-size : cover ;
+background-repeat : no-repeat;
 background-position :center center;
 border-radius : 8px;
 margin-left : 7%;
 margin-top: 7px;
-
-
 `
 const Content = styled.div`
 position : relative;
@@ -46,7 +46,6 @@ width : 100%;
 height : 100%;
 display : flex;
 z-index : 1;
-
 `;
 
 const Data = styled.div`
