@@ -9,7 +9,7 @@ import {withRouter} from 'react-router-dom';
 const Container = styled.div`
 height : calc(100vh - 50px);
 padding : 0 20px;
-padding-bottom : 10px;
+padding-bottom : 20px;
 width : 100%;
 position : absolute;
 `
@@ -30,7 +30,7 @@ position : absolute;
 top: 0;
 left: 0;
 width : 100%;
-height : 100%;
+height : calc(100vh - 50px);
 background-image : url(${Backdrop => Backdrop.bgImage });
 background-size : cover;
 background-position :center center;
@@ -87,16 +87,17 @@ const Overview = styled.p`
 margin-top : 30px;
 line-height : 23px; 
 width : 80%;
-font-size : 13px;`
+font-size : 13px;
+`
 
 
 const Yotubue = styled.iframe`
 margin-top : 20px;
 padding-top : 10px;
-height : 50vh;
+height : 90%;
 `
 const Trailer = styled.div`
-margin-top : 5px;
+
 width : 100%;
 height : 50vh;
 display : flex;
@@ -105,6 +106,8 @@ position: relative;`
 
 const NoTrailer = styled.h3`
 color : rgba(250,250,250,0.5);
+width: 0px;
+height : 0px
 `
 
 
@@ -128,10 +131,10 @@ function DetailPresenter(props){
      <Data>
     {result && <Title>{result.data.title ? result.data.title : result.data.name}</Title>}
     <ItemContainer>
-    <Item>{result.data.release_date ? 
-    result.data.release_date.substring(0,4) : 
-    result.data.first_air_date.substring(0,4)}
-    <Divider> · </Divider>
+    <Item>
+      {result.data.release_date && (result.data.release_date.substring(0,4))}
+      {result.data.first_air_date && (result.data.first_air_date.substring(0,4))}
+      <Divider> · </Divider>
     {result.data.runtime ? 
     result.data.runtime : 
     result.data.episode_run_time}분

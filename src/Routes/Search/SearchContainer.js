@@ -68,8 +68,6 @@ class SearchContainer extends React.Component {
     render(){
         const {tvResults, movieResults, searchTerm, error,loading} = this.state;
         const searchTerm1 = this.props.location.pathname.substring(8,);
-        if (searchTerm1 !== ""){console.log(`render is ${searchTerm1}`)}
-        else{console.log('없어')}
         return(<>
             <SearchPresenter  
              tvResults = {tvResults}
