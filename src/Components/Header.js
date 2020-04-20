@@ -35,6 +35,8 @@ display : flex;
 height : 50px;
 align-items : center;
 justify-content: center;
+font-weight : 500;
+font-size : 17px;
 `
 
 
@@ -49,8 +51,8 @@ function Header1(props){
              <Item current = {current === '/TV'}>
                  <SLink to  = '/TV'>TV</SLink>
              </Item>
-             <Item current = {current === '/Search'}>
-             <SLink to  = '/Search'>검색</SLink>
+             <Item current = {current === '/search'}>
+             <SLink to  = '/search'>검색</SLink>
              </Item>
          </List>
      </Header>

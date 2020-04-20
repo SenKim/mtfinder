@@ -39,8 +39,7 @@ class DetailContainer extends React.Component {
         
         
     }
-
-
+     
     componentDidMount(){
         const {match : {params : {id}}} = this.props;
         const parsedId = parseInt(id);
@@ -57,7 +56,7 @@ class DetailContainer extends React.Component {
     render(){
         const {result, error,loading} = this.state;
         return(
-        <DetailPresenter  result = {result} error = {error} loading = {loading}/>)
+        <DetailPresenter  result = {result} error = {error} loading = {loading} goBefore = {this.goBefore}/>)
     };
 
 };

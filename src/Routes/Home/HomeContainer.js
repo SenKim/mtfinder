@@ -35,6 +35,7 @@ class HomeContainer extends Component {
     };
 
     render(){
+        console.log('refresh')
         const {nowPlaying, popular, upComing, error,loading} = this.state;
         if (this.state.loading === false){
             return(

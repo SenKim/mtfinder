@@ -2,6 +2,8 @@ import React from 'react';
 import propType from 'prop-types';
 import styled from 'styled-components';
 import Loader from '../../Components/Loader';
+import { Link } from 'react-router-dom';
+import {withRouter} from 'react-router-dom';
 
 
 const Container = styled.div`
@@ -10,9 +12,16 @@ padding : 0 20px;
 padding-bottom : 10px;
 width : 100%;
 position : absolute;
-
 `
 
+const Button = styled(Link)`
+z-index : 1;
+font-size : 60px;
+opacity : 0.5;
+position : absolute;
+right : 3%;
+top : 20px;
+`
 
 
 
@@ -108,7 +117,6 @@ function DetailPresenter(props){
     error: propType.bool,
     loading: propType.bool
 };
-
     return(<>
     {loading ? <Loader /> :
     <Container>
@@ -141,11 +149,11 @@ function DetailPresenter(props){
   src = {`https://www.youtube.com/embed/${result.data.videos.results[0].key}`}
     frameborder="0" /> : <NoTrailer></NoTrailer>} 
     </Trailer>
-     </Data>  
+     </Data>
+     <Button onClick = {props.history.goBack}>X</Button>  
    </Content>
 </Container>}
-    
     </>)
 };
 
-export default DetailPresenter;
+export default withRouter(DetailPresenter);

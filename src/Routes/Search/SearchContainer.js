@@ -1,7 +1,7 @@
 import React from 'react';
 import SearchPresenter from './SearchPresenter';
 import {moviesApi, tvApi} from '../../Api';
-
+import {withRouter} from 'react-router-dom';
 
 class SearchContainer extends React.Component {
     constructor(){
@@ -19,13 +19,16 @@ class SearchContainer extends React.Component {
 };
     
 
-    handleSubmit(event){
+    async handleSubmit(event){
         event.preventDefault();
         const {searchTerm} = this.state;
-        if (searchTerm !== null){
+        await this.props.history.push(`/search/${searchTerm}`);
+        const searchTerm1 = this.props.location.pathname.substring(8,)
+        if (searchTerm1 !== null){
             this.callSearch();
         }
     };
+    
 
     updateTerm(event){
         const {target : {value}} = event;
@@ -33,12 +36,12 @@ class SearchContainer extends React.Component {
     };
 
     async callSearch(event){
-        const {searchTerm} = this.state;
-        if (searchTerm !== ""){
+        const searchTerm1 = this.props.location.pathname.substring(8,)
+        if (searchTerm1 !== ""){
             this.setState({loading : true})
             try{
-                const {data : {results : movieResults}} = await moviesApi.search(searchTerm);
-                const {data : {results : tvResults}} = await tvApi.search(searchTerm);
+                const {data : {results : movieResults}} = await moviesApi.search(searchTerm1);
+                const {data : {results : tvResults}} = await tvApi.search(searchTerm1);
                 this.setState({
                     movieResults : movieResults,
                     tvResults : tvResults
@@ -64,20 +67,27 @@ class SearchContainer extends React.Component {
 
     render(){
         const {tvResults, movieResults, searchTerm, error,loading} = this.state;
-        return(
-            
+        const searchTerm1 = this.props.location.pathname.substring(8,);
+        if (searchTerm1 !== ""){console.log(`render is ${searchTerm1}`)}
+        else{console.log('없어')}
+        return(<>
             <SearchPresenter  
              tvResults = {tvResults}
              movieResults = {movieResults}
-             searchTerm = {searchTerm}
+             searchTerm = {searchTerm1}
              error = {error}
              loading = {loading}
              handleSubmit = {this.handleSubmit}
-             updateTerm = {this.updateTerm}/>)
+             updateTerm = {this.updateTerm}/></>)
     };
-
+    componentDidMount(){
+        const searchTerm1 = this.props.location.pathname.substring(8,)
+        if (searchTerm1 !== ""){
+            this.callSearch();
+        }
+    }
 };
 
 
 
-export default SearchContainer;
+export default withRouter(SearchContainer);

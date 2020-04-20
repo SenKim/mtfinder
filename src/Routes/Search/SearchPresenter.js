@@ -39,19 +39,20 @@ searchPresenter.propType = {
 function searchPresenter(props) {
     const {tvResults,
         movieResults,
-        //searchTerm,
+    searchTerm,
         //error,
         loading,
     handleSubmit,
     updateTerm} = props;
+ 
 
-    return(<>
+    return(<> 
     <Form onSubmit = {handleSubmit}><Input type = 'text' 
     onChange = {updateTerm} 
     placeholder = "영화나 프로그램을 검색하세요">
         </Input>
     </Form>
-    {loading ? (<Loader />) : (<>
+    {loading  ? (<Loader />) : (<>
         {movieResults && movieResults.length > 0 && (
             <Section title ='영화' 
             children = {movieResults.map(movie => <Poster 
@@ -78,6 +79,7 @@ function searchPresenter(props) {
         {tvResults && tvResults.length === 0 &&(<Container><Message text = '' /></Container>)}    
         </>
     )}
+      
     </>
     )
 };
